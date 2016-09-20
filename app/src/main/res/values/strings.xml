@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">In And Out</string>
+    <string name="order_title">Place an Order</string>
+    <string name="double_double_item">Double Double</string>
+    <string name="price_double_double">$3.60</string>
+    <string name="cheeseburger_item">Cheeseburger</string>
+</resources>
