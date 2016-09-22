@@ -10,7 +10,10 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="edu.orangecoastcollege.cs273.tmorrissey1.inandout.OrderActivity"
     android:columnCount="3"
-    android:background="@drawable/order_background">
+    android:background="@drawable/order_background"
+    android:columnOrderPreserved="false"
+    android:useDefaultMargins="false"
+    android:alignmentMode="alignMargins">
 
     <TextView
         android:layout_width="wrap_content"
@@ -20,8 +23,10 @@
         android:id="@+id/textView"
         android:layout_column="0"
         android:layout_columnSpan="3"
+        android:layout_row="0"
         android:layout_gravity="center_horizontal"
-        android:layout_row="0"/>
+        android:paddingTop="10dp"
+        android:textColor="#000000"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -31,7 +36,10 @@
         android:id="@+id/textView2"
         android:layout_column="0"
         android:layout_row="1"
-        android:textSize="14sp"/>
+        android:textSize="14sp"
+        android:paddingTop="10dp"
+        android:layout_gravity="right"
+        android:textColor="@color/background_floating_material_dark"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -40,7 +48,25 @@
         android:text="@string/price_double_double"
         android:id="@+id/textView3"
         android:textSize="14sp"
-        />
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_row="1"
+        android:layout_column="1"
+        android:paddingTop="10dp"
+        android:textColor="@color/background_floating_material_dark"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="6"
+        android:id="@+id/doubleDoubleEditText"
+        android:layout_row="1"
+        android:layout_column="2"
+        android:paddingTop="10dp"
+        android:backgroundTint="@color/button_material_dark"
+        android:textColor="@color/background_floating_material_dark"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -50,22 +76,256 @@
         android:id="@+id/textView4"
         android:layout_row="2"
         android:layout_column="0"
-        android:textSize="14sp"/>
+        android:textSize="14sp"
+        android:paddingTop="10dp"
+        android:layout_gravity="right"
+        android:textColor="@color/background_floating_material_dark"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="$2.15"
+        android:text="@string/price_cheeseburger"
         android:id="@+id/textView5"
-        android:textSize="14sp"/>
+        android:textSize="14sp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_row="2"
+        android:layout_column="1"
+        android:paddingTop="10dp"
+        android:textColor="@color/background_floating_material_dark"/>
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="number"
-        android:ems="10"
-        android:id="@+id/editText"
-        android:layout_row="1"
-        android:layout_column="2"/>
+        android:ems="6"
+        android:id="@+id/cheeseburgerEditText"
+        android:paddingTop="10dp"
+        android:layout_row="2"
+        android:layout_column="2"
+        android:textColor="@color/background_floating_material_dark"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/french_fries"
+        android:id="@+id/textView6"
+        android:layout_column="0"
+        android:layout_row="3"
+        android:textIsSelectable="false"
+        android:textSize="14sp"
+        android:paddingTop="10dp"
+        android:layout_gravity="right"
+        android:textColor="@color/background_floating_material_dark"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/price_french_fry"
+        android:id="@+id/textView7"
+        android:layout_row="3"
+        android:layout_column="1"
+        android:textSize="14sp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:paddingTop="10dp"
+        android:textColor="@color/background_floating_material_dark"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="6"
+        android:id="@+id/frenchFryEditText"
+        android:layout_column="2"
+        android:layout_row="3"
+        android:paddingTop="10dp"
+        android:textColor="@color/background_floating_material_dark"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/price_shakes"
+        android:id="@+id/textView8"
+        android:layout_row="4"
+        android:layout_column="1"
+        android:textSize="14sp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:paddingTop="10dp"
+        android:textColor="@color/background_floating_material_dark"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/shakes"
+        android:id="@+id/textView9"
+        android:layout_column="0"
+        android:layout_row="4"
+        android:textIsSelectable="false"
+        android:textSize="14sp"
+        android:paddingTop="10dp"
+        android:layout_gravity="right"
+        android:textColor="@color/background_floating_material_dark"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="6"
+        android:id="@+id/shakesEditText"
+        android:layout_column="2"
+        android:layout_row="4"
+        android:paddingTop="10dp"
+        android:textColor="@color/background_floating_material_dark"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/fountain_drinks_group"
+        android:id="@+id/textView10"
+        android:layout_column="0"
+        android:layout_row="5"
+        android:textIsSelectable="false"
+        android:textSize="14sp"
+        android:paddingTop="10dp"
+        android:layout_gravity="right"
+        android:layout_columnSpan="2"
+        android:textColor="@color/background_floating_material_dark"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/price_drink_small"
+        android:id="@+id/textView11"
+        android:layout_row="6"
+        android:layout_column="1"
+        android:textSize="14sp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:paddingTop="10dp"
+        android:textColor="@color/background_floating_material_dark"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="6"
+        android:id="@+id/smallDrinkEditText"
+        android:layout_column="2"
+        android:layout_row="6"
+        android:paddingTop="10dp"
+        android:textColor="@color/background_floating_material_dark"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/small_drink"
+        android:id="@+id/textView12"
+        android:layout_column="0"
+        android:layout_row="6"
+        android:textIsSelectable="false"
+        android:textSize="14sp"
+        android:paddingTop="10dp"
+        android:layout_gravity="right"
+        android:textColor="@color/background_floating_material_dark"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="6"
+        android:id="@+id/mediumDrinkEditText"
+        android:layout_column="2"
+        android:layout_row="7"
+        android:paddingTop="10dp"
+        android:textColor="@color/background_floating_material_dark"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/price_drink_small"
+        android:id="@+id/textView13"
+        android:layout_row="7"
+        android:layout_column="1"
+        android:textSize="14sp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:paddingTop="10dp"
+        android:textColor="@color/background_floating_material_dark"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/medium_drink"
+        android:id="@+id/textView14"
+        android:layout_column="0"
+        android:layout_row="7"
+        android:textIsSelectable="false"
+        android:textSize="14sp"
+        android:paddingTop="10dp"
+        android:layout_gravity="right"
+        android:textColor="@color/background_floating_material_dark"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/large_drink"
+        android:id="@+id/textView15"
+        android:layout_column="0"
+        android:layout_row="8"
+        android:textIsSelectable="false"
+        android:textSize="14sp"
+        android:paddingTop="10dp"
+        android:layout_gravity="right"
+        android:textColor="@color/background_floating_material_dark"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="6"
+        android:id="@+id/largeDrinkEditText"
+        android:layout_column="2"
+        android:layout_row="8"
+        android:paddingTop="10dp"
+        android:textColor="@color/background_floating_material_dark"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/price_drink_large"
+        android:id="@+id/textView16"
+        android:layout_row="8"
+        android:layout_column="1"
+        android:textSize="14sp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:paddingTop="10dp"
+        android:textColor="@color/background_floating_material_dark"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/order_button_text"
+        android:id="@+id/orderButton"
+        android:layout_row="9"
+        android:layout_column="0"
+        android:layout_columnSpan="3"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"/>
+
 </GridLayout>

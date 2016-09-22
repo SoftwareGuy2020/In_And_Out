@@ -4,4 +4,22 @@
     <string name="double_double_item">Double Double</string>
     <string name="price_double_double">$3.60</string>
     <string name="cheeseburger_item">Cheeseburger</string>
+    <string name="french_fries">French Fries</string>
+    <string name="price_french_fry">$1.64</string>
+    <string name="shakes">Shakes</string>
+    <string name="price_shakes">$2.20</string>
+    <string name="fountain_drinks_group">Fountain Drinks (pick size)</string>
+    <string name="small_drink">Small</string>
+    <string name="price_drink_small">$1.45</string>
+    <string name="medium_drink">Medium</string>
+    <string name="price_drink_medium">$1.55</string>
+    <string name="large_drink">Large</string>
+    <string name="price_drink_large">$1.75</string>
+    <string name="order_button_text">PLACE ORDER</string>
+    <string name="price_cheeseburger">$2.15</string>
+    <string name="order_total">Order Total\t</string>
+    <string name="items_ordered">Items Ordered:\t</string>
+    <string name="subtotal">Subtotal:\t</string>
+    <string name="tax">Tax (8%):\t</string>
+    <string name="newOrderButtonText">START NEW ORDER</string>
 </resources>
